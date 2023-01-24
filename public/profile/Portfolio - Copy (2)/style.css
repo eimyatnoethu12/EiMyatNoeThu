@@ -1,0 +1,275 @@
+:root {
+    --light-backcolor: linear-gradient(90deg, rgba(49, 143, 254, 1) 0%, rgba(142, 61, 255, 0.311) 83%);
+    --night-backcolor: linear-gradient(90deg, rgb(3, 2, 10) 50%, rgba(16, 4, 37, 0.993) 0%);
+    --body-color: linear-gradient(90deg, rgb(0, 118, 253) 0%, rgb(156, 85, 255) 83%);
+    --icon-color: linear-gradient(90deg, rgb(206, 49, 254) 0%, rgba(48, 83, 255, 0.311) 83%);
+    --text-color: black;
+    --text-night: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.home,
+.skill,
+.project,
+.freelancer,
+.polofilo,
+.contact {
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+.change_night {
+    background: var(--body-color);
+    background: var(--night-backcolor);
+    color: var(--text-night);
+
+}
+
+.ttext {
+    color: white;
+}
+
+nav {
+    background: var(--light-backcolor);
+    backdrop-filter: blur(30px);
+    visibility: hidden;
+}
+
+/* .navbar {
+    visibility: hidden;
+} */
+
+.progressBar {
+    background-color: black;
+}
+
+.progresstext,
+.pj {
+    background: var(--text-color);
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+i {
+    background: var(--icon-color);
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tex {
+    border: 0.3px dotted rgba(0, 0, 0, 0.297);
+}
+
+.content {
+    position: relative;
+}
+
+.content .logo {
+    color: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.content .logo:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px #1d1d87;
+}
+
+.content .logo:nth-child(2) {
+    color: #a545ff;
+    animation: animate 1s ease-in-out infinite;
+}
+
+/* img */
+/* .img-containe {
+    width: 200px;
+    height: 200px;
+} */
+
+/* .imge {
+    /* height: 50vh;
+    width: 100%; */
+/* color: white; */
+/* font: bold 6.5em/2em monospace; */
+/* display: flex; */
+/* justify-content: center; */
+/* align-items: center; */
+
+/* background: linear-gradient(to top, #3204fd61, #9907fa44),
+url('./image/mypic.jpg');
+} */
+
+
+/* animation text start */
+.main {
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    /* text-align: center; */
+    /* text-transform: uppercase; */
+    color: skyblue;
+    /* font-size: 4rem; */
+}
+
+.roller {
+    height: 3rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden;
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1D3557;
+}
+
+
+#spare-time {
+    font-size: 1rem;
+    font-style: italic;
+    /* letter-spacing: 1rem; */
+    margin-top: 0;
+    color: #A8DADC;
+
+}
+
+#rolltext {
+    font-size: 2rem;
+}
+
+.roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;
+}
+
+/* preloader */
+#preloader {
+    background: black;
+    height: 100vh;
+    min-width: 100%;
+    position: fixed;
+    z-index: 1000;
+    /* display: none; */
+}
+
+.loadertext,
+.loader {
+    max-width: 40%;
+    padding-bottom: 60px;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    color: rgb(38, 5, 62);
+    text-transform: uppercase;
+}
+
+.loader {
+
+    text-align: center;
+    /* width: 30%; */
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+
+    25% {
+        top: -4rem;
+    }
+
+    50% {
+        top: -8rem;
+    }
+
+    72.5% {
+        top: -12.25rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #F1FAEE;
+        /* font-size: 2.125rem; */
+    }
+
+    .roller {
+        height: 2.6rem;
+        line-height: 2.125rem;
+    }
+
+    #spare-time {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .roller #rolltext {
+        animation: slide-mob 5s infinite;
+    }
+
+    @keyframes slide-mob {
+        0% {
+            top: 0;
+        }
+
+        25% {
+            top: -2.125rem;
+        }
+
+        50% {
+            top: -4.25rem;
+        }
+
+        72.5% {
+            top: -6.375rem;
+        }
+    }
+}
+
+
+
+/* animation text end */
+
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
